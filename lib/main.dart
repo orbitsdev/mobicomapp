@@ -1,17 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobicom/presentation/login_screen/login_screen.dart';
 
 import 'core/app_export.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]).then((value) {
-    Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
-    runApp(MyApp());
-  });
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  // ]).then((value) {
+  //   Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
+  //   runApp(MyApp());
+  // });
 }
 
 class MyApp extends StatelessWidget {
@@ -26,9 +27,11 @@ class MyApp extends StatelessWidget {
         locale: Get.deviceLocale, //for setting localization strings
         fallbackLocale: Locale('en', 'US'),
         title: 'mobicom',
-        initialBinding: InitialBindings(),
-        initialRoute: AppRoutes.initialRoute,
-        getPages: AppRoutes.pages,
+      //  initialBinding: InitialBindings(),
+        initialRoute: '/',
+        getPages: [
+          GetPage(name: '/', page: ()=>LoginScreen())
+        ],
       );
     });
   }

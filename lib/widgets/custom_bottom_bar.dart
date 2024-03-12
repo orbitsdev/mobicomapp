@@ -114,6 +114,9 @@ class CustomBottomBar extends StatelessWidget {
 
 enum BottomBarEnum {
   Home,
+  Exercises,
+  TakedExercises,
+  
   Top,
   Favorites,
   Search,

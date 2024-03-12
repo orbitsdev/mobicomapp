@@ -27,7 +27,7 @@ class AppRoutes {
 
   static const String homePageContainerScreen = '/home_page_container_screen';
 
-  static const String topPlaylistsPage = '/top_playlists_page';
+  static const String chapterScreen = '/chapter_screen';
 
   static const String listScreen = '/list_screen';
 

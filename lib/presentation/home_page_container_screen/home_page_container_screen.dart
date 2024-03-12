@@ -33,9 +33,10 @@ class HomePageContainerScreen extends GetWidget<HomePageContainerController> {
   String getCurrentRoute(BottomBarEnum type) {
     switch (type) {
       case BottomBarEnum.Home:
-        return AppRoutes.homePage;
+        return AppRoutes.chapterScreen;
       case BottomBarEnum.Top:
-        return AppRoutes.topPlaylistsPage;
+        return AppRoutes.homePage;
+      
       case BottomBarEnum.Favorites:
         return AppRoutes.favoritesPage;
       case BottomBarEnum.Search:
@@ -50,7 +51,7 @@ class HomePageContainerScreen extends GetWidget<HomePageContainerController> {
     switch (currentRoute) {
       case AppRoutes.homePage:
         return HomePage();
-      case AppRoutes.topPlaylistsPage:
+      case AppRoutes.chapterScreen:
         return TopPlaylistsPage();
       case AppRoutes.favoritesPage:
         return FavoritesPage();
